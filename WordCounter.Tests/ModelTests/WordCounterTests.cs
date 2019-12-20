@@ -57,6 +57,28 @@ namespace Project.Tests
             bool result = newRepeatCounter.IsSentence();
             Assert.AreEqual(result, false);
         }
+        [TestMethod]
+        public void WordCount_HowManyTimesDoesTheSentenceContainTheWord_One()
+        {
+            RepeatCounter newRepeatCounter = new RepeatCounter("fox", "The fox jumps over the lazy brown cow.");
+            int result = newRepeatCounter.WordCount();
+            Assert.AreEqual(result, 1);
+        }
+        [TestMethod]
+        public void WordCount_HowManyTimesDoesTheSentenceContainTheWordWhenWordIsWonky_One()
+        {
+            RepeatCounter newRepeatCounter = new RepeatCounter("fox", "The foX; jumps over the lazy brown cow.");
+            int result = newRepeatCounter.WordCount();
+            Assert.AreEqual(result, 1);
+        }
+        [TestMethod]
+        public void WordCount_HowManyTimesDoesTheSentenceContainTheWord_Two()
+        {
+            RepeatCounter newRepeatCounter = new RepeatCounter("fox", "The fox jumps over the lazy brown fox.");
+            int result = newRepeatCounter.WordCount();
+            Assert.AreEqual(result, 2);
+        }
+ 
  
     }
 }

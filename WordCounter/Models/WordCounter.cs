@@ -34,7 +34,8 @@ namespace WordCounter.Models
       {
         return true;
       }
-      else{
+      else
+      {
         return false;
       }
     }
@@ -71,6 +72,22 @@ namespace WordCounter.Models
       {
         return false;
       }
+    }
+
+    public int WordCount()
+    {
+      int count = 0;
+      string sentenceLowered = Sentence.ToLower();
+      string wordLowered = Word.ToLower();
+      string[] sentenceArr = sentenceLowered.Split(" ");
+      for ( int i = 0; i < sentenceArr.Length; i++ )
+      {
+        if ( sentenceArr[i] == wordLowered || sentenceArr[i] == wordLowered + "," || sentenceArr[i] == wordLowered + "." || sentenceArr[i] == wordLowered + "!" || sentenceArr[i] == wordLowered + "?" || sentenceArr[i] == wordLowered + ";" || sentenceArr[i] == wordLowered + ":")
+        {
+          count++;
+        }
+      }
+      return count;
     }
   }
 }
