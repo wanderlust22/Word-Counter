@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 
 namespace WordCounter.Models
 {
@@ -7,6 +5,11 @@ namespace WordCounter.Models
   {
     public string Word { get; set;}
     public string Sentence { get; set; }
+
+    public RepeatCounter(string sentence)
+    {
+      Sentence = sentence;
+    }
     public RepeatCounter(string word, string sentence)
     {
       Word = word;
