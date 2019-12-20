@@ -15,7 +15,17 @@ namespace WordCounter.Models
 
     public bool IsWord()
     {
-      return false;
+      string abc = "abcdefghijklmnopqrstuvwxyz";
+      string lowercase = Word.ToLower();
+
+      for (int i = 0; i < Word.Length; i++)
+      {
+        if ( !abc.Contains(Word[i]) )
+        {
+          return false;
+        }
+      }
+      return true;
     }
 
     public bool IsSentence()
