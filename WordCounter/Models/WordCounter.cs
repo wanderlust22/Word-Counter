@@ -30,7 +30,7 @@ namespace WordCounter.Models
 
     public bool IsSentence()
     {
-      if (this.IsUpperCased())
+      if (this.IsUpperCased() && this.IsPuncuated())
       {
         return true;
       }
@@ -45,7 +45,7 @@ namespace WordCounter.Models
       string firstWord = sentenceArr[0];
       string firstUpper = firstWord.ToUpper();
 
-      if ( firstWord[0] == firstUpper[0])
+      if ( firstWord[0] == firstUpper[0] )
       {
         return true;
       }
@@ -57,7 +57,20 @@ namespace WordCounter.Models
 
     public bool IsPuncuated()
     {
-      return false;
+      string[] sentenceArr = Sentence.Split(" ");
+      int length = sentenceArr.Length;
+      string lastWord = sentenceArr[length - 1];
+      int lastWordLength = lastWord.Length;
+      string marks = ".!?";
+
+      if ( marks.Contains(lastWord[lastWordLength - 1]) )
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
   }
 }

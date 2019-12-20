@@ -1,6 +1,5 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Project.Models;
 using System.Collections.Generic;
 using WordCounter.Models;
 
@@ -47,9 +46,16 @@ namespace Project.Tests
         [TestMethod]
         public void IsSentence_DoesTheSentenceEndWithPunctuation_True()
         {
-            RepeatCounter newRepeatCounter = new RepeatCounter("fox", "the fox jumps over the lazy brown cow.");
+            RepeatCounter newRepeatCounter = new RepeatCounter("fox", "The fox jumps over the lazy brown cow.");
             bool result = newRepeatCounter.IsSentence();
             Assert.AreEqual(result, true);
+        }
+        [TestMethod]
+        public void IsSentence_DoesTheSentenceEndWithPunctuation_False()
+        {
+            RepeatCounter newRepeatCounter = new RepeatCounter("fox", "The fox jumps over the lazy brown cow");
+            bool result = newRepeatCounter.IsSentence();
+            Assert.AreEqual(result, false);
         }
  
     }
