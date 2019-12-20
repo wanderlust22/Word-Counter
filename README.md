@@ -25,8 +25,10 @@ Github - https://github.com/wanderlust22/Word-Counter
 
 | Specs.  | Ex. Input  | Ex. Output   |
 |---|---|---|
-| Program checks to see whether user inputs a real word  | "fox" or "ap4d"  | Accepted. or Not Accepted.  |
-| Program checks to see whether user inputs a real sentence  | "This a sentence with punctuation." or  "this ain't a full sentence"  | Sentence or Not sentence  |
+| Program checks to see whether user inputs a word made of all letters | "fox" or "ap4d"  | Accepted. or Not Accepted.  |
+| Program ignores whether there is or isn't capilization of the word inputted | "Fox", "FoX", "fox" | All Accepted. |
+| Program checks to see whether user inputs a real sentence with first letter capitalized  | "This a sentence with punctuation." or  "this ain't a full sentence"  | Sentence or Not sentence  |
+| Program checks to see if the sentence entered has punctuation at the end. | "This is a proper sentence with a period.", "This sentence does not have a period at the end" | Accepted and Not Accepted |
 | Program accurately tells user how many times word is present in sentence.  | "fox", "The fox jumps over the lazy brown cow."  | "fox" is present one time in the sentence.  |
 
 
