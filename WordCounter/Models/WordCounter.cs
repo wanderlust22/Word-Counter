@@ -20,7 +20,7 @@ namespace WordCounter.Models
 
       for (int i = 0; i < Word.Length; i++)
       {
-        if ( !abc.Contains(Word[i]) )
+        if ( !abc.Contains(lowercase[i]) )
         {
           return false;
         }
