@@ -30,6 +30,33 @@ namespace WordCounter.Models
 
     public bool IsSentence()
     {
+      if (this.IsUpperCased())
+      {
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+
+    public bool IsUpperCased()
+    {
+      string[] sentenceArr = Sentence.Split(" ");
+      string firstWord = sentenceArr[0];
+      string firstUpper = firstWord.ToUpper();
+
+      if ( firstWord[0] == firstUpper[0])
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
+
+    public bool IsPuncuated()
+    {
       return false;
     }
   }

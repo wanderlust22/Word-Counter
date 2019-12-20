@@ -37,13 +37,20 @@ namespace Project.Tests
             bool result = newRepeatCounter.IsSentence();
             Assert.AreEqual(result, true);
         }
-        // [TestMethod]
-        // public void IsWord_IsTheWordAllLettersIfUppercased_True()
-        // {
-        //     RepeatCounter newRepeatCounter = new RepeatCounter("fOx", "The fox jumps over the lazy brown cows");
-        //     bool result = newRepeatCounter.IsWord();
-        //     Assert.AreEqual(result, true);
-        // }
+        [TestMethod]
+        public void IsSentence_DoesTheSentenceBeginWithUpperCaseLetter_False()
+        {
+            RepeatCounter newRepeatCounter = new RepeatCounter("fOx", "the fox jumps over the lazy brown cow.");
+            bool result = newRepeatCounter.IsSentence();
+            Assert.AreEqual(result, false);
+        }
+        [TestMethod]
+        public void IsSentence_DoesTheSentenceEndWithPunctuation_True()
+        {
+            RepeatCounter newRepeatCounter = new RepeatCounter("fox", "the fox jumps over the lazy brown cow.");
+            bool result = newRepeatCounter.IsSentence();
+            Assert.AreEqual(result, true);
+        }
  
     }
 }
