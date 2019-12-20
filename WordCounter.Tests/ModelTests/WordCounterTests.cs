@@ -16,6 +16,13 @@ namespace Project.Tests
             bool result = newRepeatCounter.IsWord();
             Assert.AreEqual(result, true);
         }
+        [TestMethod]
+        public void IsWord_IsTheWordAllLetters_False()
+        {
+            RepeatCounter newRepeatCounter = new RepeatCounter("f@x", "The fox jumps over the lazy brown cows");
+            bool result = newRepeatCounter.IsWord();
+            Assert.AreEqual(result, false);
+        }
  
     }
 }
