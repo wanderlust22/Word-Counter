@@ -1,18 +1,18 @@
-# Project
-##### By Name
-###### Created 19 December, 2019
+# Word Counter
+##### By Will Quanstrom
+###### Created 20 December, 2019
 
 ## Description
 
-This project allows users to ...
+A console app where a user inputs and word and a sentence and is returned how many times the word is present in the sentence.
 
 ## Links:
 
-Github - https://github.com/ (Name/ProjectName)
+Github - https://github.com/wanderlust22/Word-Counter
 
 ## Setup/Installation Requirements:
 
-1. Open https://github.com/ (Name/ProjectName)
+1. Open https://github.com/wanderlust22/Word-Counter
 2. Clone repository to local machine 
 3. Build and Run project
 
@@ -23,7 +23,12 @@ Github - https://github.com/ (Name/ProjectName)
 
 ### Specification
 
-  This programs allows users to ...
+| Specs.  | Ex. Input  | Ex. Output   |
+|---|---|---|
+| Program checks to see whether user inputs a real word  | "fox" or "ap4d"  | Accepted. or Not Accepted.  |
+| Program checks to see whether user inputs a real sentence  | "This a sentence with punctuation." or  "this ain't a full sentence"  | Sentence or Not sentence  |
+| Program accurately tells user how many times word is present in sentence.  | "fox", "The fox jumps over the lazy brown cow."  | "fox" is present one time in the sentence.  |
+
 
 ## Known Bugs
 
@@ -33,10 +38,11 @@ Github - https://github.com/ (Name/ProjectName)
 
 * C#
 * .NET
+* MSTest
 
 ### License:
 
-Copyright (c) 2019 Name
+Copyright (c) 2019 Will Quanstrom
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
